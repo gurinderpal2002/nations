@@ -1,0 +1,24 @@
+@import "abstract/variables";
+@import "abstract/mixins";
+
+@import "base/base";
+@import "base/animations";
+
+@import "base/typography";
+@import "base/utilities";
+
+
+@import "pages/homepage";
+
+@import "layouts/header";
+@import "components/buttons";
+@import "components/backgroundVideo";
+@import "layouts/intro";
+@import "components/slider";
+@import "layouts/continent";
+@import "components/loader";
+@import "layouts/card";
+@import "layouts/imagesGrid";
+@import "layouts/footer";
+@import "components/popup";
+

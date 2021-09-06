@@ -1,0 +1,134 @@
+.popup__close{
+
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    border: none;
+    background: none;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    color: $primary-color-1;
+    transition: all .2s;
+    line-height: 1;
+        
+    &:hover{
+        color: $secondary-color-1;
+    }
+}
+
+
+
+.popup{
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(15, 15, 15, 0.863);
+    transition: all .3s;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__content{
+        height: 90%;
+        width: 50%;
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 2rem 4rem rgba(15, 15, 15, 0.2);
+        overflow: hidden;
+        border-radius: 3px;
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include respond(tab-port) { // width < 1200?
+        width: 80%;//1 rem = 9px, 9/16 = 50%
+    }
+
+    
+    @include respond(phone) { // width < 1200?
+        width: 100%;//1 rem = 9px, 9/16 = 50%
+    }
+
+
+    
+    }
+
+
+
+}
+
+.popup-heading{
+    align-self: center;
+    font-size: 4rem;
+    line-height: 1.2;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+
+.image__composition{
+
+    display: grid;
+    height: 70%;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+
+    &-img{
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 1.5rem 4rem rgba(15, 15, 15, 0.5);
+        transition: all .2s;
+        outline-offset: 1rem;
+        
+        &:hover{
+            outline: 1rem solid $secondary-color-1;
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba(15, 15, 15, 0.5);
+            z-index: 10;
+        }
+    }
+
+    &-img--1{
+        grid-column: 2 / span 6;
+        grid-row: 1 / span 4;
+    }
+
+
+    &-img--2{
+        grid-column: 7 / span 6;
+        grid-row: 2 / span 4;
+
+    }
+
+
+
+    &-img--3{
+        grid-column: 4 / span 6;
+        grid-row: 4 / span 4;
+
+
+    }
+   
+
+}
+
+
+
+.wiki-button{
+    
+    margin: 1rem;
+    text-align: center;
+}
+
+
+    

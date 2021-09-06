@@ -1,0 +1,121 @@
+.cards{
+    grid-column: pad-l-end / pad-r-start;
+    grid-row: 5 / span 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 28rem);
+    grid-template-rows: repeat(auto-fill, 48rem);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-content: center;
+
+    @include respond(phone){
+        grid-row: 6 / span 1;
+    }
+}
+
+
+
+.card{
+
+    height: 48rem;
+    width: 28rem;
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    
+    position: relative;
+    &__side{
+        font-size: 3rem;
+        transition: all .8s ease;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.582);
+        background-color: $background-color-2;
+
+        
+        &--back{
+            background-image: url(https://flagcdn.com/in.svg);
+            background-size: 100% 100%;
+            transform: rotateY(180deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+
+
+            
+        }
+    }
+
+
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    &__picture{
+        
+        height: 35%;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        img{
+
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+
+    &__heading{
+
+        text-transform: uppercase;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-left: 1rem;
+        letter-spacing: 2px;
+        color: #030a25;
+        font-weight: 600;
+
+        font-size: 2rem;
+    }
+
+
+
+    &__details{
+        ul{
+            list-style: none;
+            width: 90%;
+            margin: 0 auto;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $primary-color-2;
+                }
+
+            }
+
+        }
+    }
+
+
+    &-back--content{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+    }
+}

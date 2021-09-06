@@ -1,0 +1,53 @@
+{
+  "name": "nations",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "apollo-boost": "^0.4.9",
+    "axios": "^0.21.1",
+    "graphql": "^15.5.2",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "comp:sass": "node-sass sass/main.scss public/css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.comp.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss": "^8.3.6"
+  }
+}

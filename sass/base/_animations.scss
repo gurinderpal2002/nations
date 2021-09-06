@@ -1,0 +1,74 @@
+@keyframes rotateLoader {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+@keyframes popUp-fadeIn {
+
+    0%{
+        transform: translate(-50%,-50%) scale(0.25);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes moveInL {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+        z-index: 999;
+    }
+
+    80% {
+        transform: translateX(1rem);
+        z-index: 999;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 999;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}

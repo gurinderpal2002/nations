@@ -1,0 +1,111 @@
+.intro{
+    box-shadow: 1rem 1rem 2rem $primary-color-1;
+    margin-top: 10rem;
+    height: 80vh;
+
+
+    @include respond(small-phone){
+        height: 70vh;
+    }
+
+    @include respond(small-phone){
+        height: 60vh;
+    }
+
+    &__gallery{
+
+        grid-column: full-start /  col-start 3;
+        background-color: rgb(59, 51, 51);
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+
+        @include respond(phone){
+            grid-column: full-start / col-end 5;
+        }
+         
+    }
+
+
+    &--photo-1{
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    &--photo-2{
+        grid-column: 6 / -1;
+        grid-row: 2 / -2;
+        width: 250%;
+        height: 100%;
+
+        
+        @media only screen and (max-width: 64rem) {
+            width: 300%;
+        }
+
+    }
+
+
+    &__text{
+        grid-column: col-start 3 / full-end;
+        padding-top: 5rem;
+        padding-left: 15rem;
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+    
+        @include respond(phone){
+            grid-column: full-start / full-end;
+            padding: 4rem 1rem;
+            height: 50vh;
+        
+        }
+
+
+        
+        @include respond(small-phone){
+            grid-column: full-start / full-end;
+            padding: 2rem 1rem;
+            height: 55vh;
+        
+        }
+
+       
+        ul{
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media only screen and (max-width: 68rem) {
+                padding: .5rem;
+            }
+
+
+            li{
+                text-align: center;
+                font-size: 2.5rem;
+                padding: 2rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $primary-color-2;
+                }
+
+
+            }
+
+        }
+
+
+    }
+}

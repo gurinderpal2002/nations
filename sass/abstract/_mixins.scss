@@ -1,0 +1,27 @@
+@mixin text-gradient {
+    background-image: linear-gradient(to right bottom, #461264, #176d6d);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == small-phone {
+        @media only screen and (max-width: 28.125em) { @content};
+    }
+
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 40.625em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 57.5em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
